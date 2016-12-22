@@ -1,16 +1,18 @@
 # Cards
 
-A card is a resource. Let's pontificte on cards a bit and explain the context of them. Talk about how you can make a general GET to list all cards.
+A card is a top-level resource at Trello. 
 
-## Get A Single Card
+## The Card Object
+
+Vivamus ac metus sapien. Sed porta ante ut purus luctus posuere. Donec id odio quis dolor venenatis efficitur eget eget mi. Sed efficitur augue vitae congue porttitor. Donec volutpat risus enim, at ullamcorper tellus scelerisque in. Quisque ac nisl ipsum. Morbi consectetur lorem mi. Mauris id fermentum sapien, id sollicitudin felis. Nam nunc metus, facilisis et fringilla id, dapibus ac dolor. Praesent commodo metus sapien, nec posuere lacus consequat vitae. Aenean feugiat ipsum ex, vel sodales ipsum laoreet quis. Morbi id odio quis est tristique ultrices eu id ipsum. Sed fermentum rutrum ornare. Duis finibus lacus at pellentesque interdum.
+
+## Getting Cards
 
 ```shell
 curl "http://api.trello.com/1/cards/cardId?key=YOUR_API_KEY"
 ```
 
 ```javascript
-\\ Make sure you've included client.js with your key.
-
 Trello.cards.get("cardId")
 ```
 
@@ -71,15 +73,9 @@ Trello.cards.get("cardId")
 }
 ```
 
-This endpoint retrieves all kittens.
-
 <aside class="warning">This is a warning about something.</aside>
 
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
+#### Query Parameters
 
 Parameter | Default | Options | Description
 --------- | ------- | ------- | -----------
@@ -93,6 +89,12 @@ action_fields|all|all,data, date, idMemberCreator, type|The fields you'd want ba
 Query parameters can be a list seperated by commas `api.trello.com/1/cards/?actions=disablePowerUp,updateCard`
 </aside>
     
+## Updating Cards
+
+## Creating Cards
+
+## Deleting Cards
+
 ## Card Actions
 
 A card has a number of actions attached to it. Actions are generated for a card when thing x, y, and z occurs.
@@ -184,12 +186,12 @@ Trello.cards.get('CardID',['actions'])
 ]
 ```
 
-This endpoint retrieves all kittens.
-
-<aside class="warning">This is a warning about something.</aside>
-
-
 ## Card Attachments
+
+### Getting Card Attachments
+### Updating Card Attachments
+### Deleting Card Attachments
+
 ## Card Board
 ## Card CheckItemStates
 ## Card Checklists
